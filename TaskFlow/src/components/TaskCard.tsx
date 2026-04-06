@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { Task } from '../types';
 import { colors, layout } from '../theme';
-import { CheckCircle2, Circle, MoreVertical, Briefcase, User, BookOpen, PenTool, Heart } from 'lucide-react-native';
+import { CircleCheck, Circle, MoreVertical, Briefcase, User, BookOpen, PenTool, Heart } from 'lucide-react-native';
 
 interface TaskCardProps {
   task: Task;
@@ -46,7 +46,7 @@ export const TaskCard = ({ task, onPress, onToggle }: TaskCardProps) => {
 
       <TouchableOpacity onPress={onToggle} style={styles.actionButton}>
         {task.completed ? (
-          <CheckCircle2 size={24} color={colors.success} />
+          <CircleCheck size={24} color={colors.success} />
         ) : (
           <Circle size={24} color={colors.textLight} />
         )}
